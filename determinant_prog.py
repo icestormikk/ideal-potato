@@ -1,3 +1,6 @@
+#Простенькая программка, считающая определитель квадратной матрицы со следующими параметрами:
+#> размер матрицы - целое число, введённое пользователем
+#> элементы матрицы - случайные числа из диапазона от 1 до 10
 import random
 
 def gauss(matr):
@@ -15,7 +18,9 @@ def determinant(matr):
         result *= matr[i][i];
     return round(result)
 
-size = random.randint(1,10);
+size = int(input()); 
+if (size < 1):
+    size = random.randint(1,10);
 mas = [[0] * size for i in range(size)];
 for i in range(len(mas)):
     for j in range(len(mas[i])):
