@@ -37,7 +37,7 @@ while True:
         name = input('\tВведите название удаляемого предмета: ')
         if (duplicateItem(name)):
             inventory.remove(duplicateItem(name))
-            print("\t[DONE] Удаление предмета", name, " прошло успешно");
+            print("\t[DONE] Удаление предмета", name, "прошло успешно");
         else:
             print("\t[!] Предмет с таким названием отсутствует в инвентаре")
     elif (user_in == "showinventory"):
