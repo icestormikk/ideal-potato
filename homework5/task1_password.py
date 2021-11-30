@@ -1,5 +1,6 @@
+min_pass_length = 6
 def checkPassword(password):
-    if (len(password) < 7):
+    if (len(password) < min_pass_length):
         raise ValueError("Слишком короткий пароль.");
     elif ({x for x in password}.intersection({str(i) for i in range(10)}).__len__() == 0):
         #если множество из символов принятой строки не пересекается с множеством из цифр, то возвращаем False (или бросаем исключение)
@@ -12,7 +13,7 @@ def checkPassword(password):
         return True;
 
 def isPassword(password):
-    if (len(password) < 7):
+    if (len(password) < min_pass_length):
         return False;
     elif ({x for x in password}.intersection({str(i) for i in range(10)}).__len__() == 0):
         return False;
