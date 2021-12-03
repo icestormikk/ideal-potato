@@ -29,7 +29,7 @@ if (len(encodedStrings) != 0):
         print("Результат обратного перевода", decodeStrings(encodedStrings)); exit()
 
 try:
-    with open(input("Введите путь к файлу со строками байтов: "), "rb") as f:
+    with open(input("Введите путь к файлу со строками из байт-кодов: "), "rb") as f:
         print("Результат обратного перевода:", decodeStrings(f.readlines()))
 except FileNotFoundError:
     print("[!] Не удалось найти файл по введённому пути.")
