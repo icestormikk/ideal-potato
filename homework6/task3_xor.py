@@ -26,4 +26,4 @@ if (len(encoding_text) > 0):
     print("\nXOR-дешифрование")
     print("  Результат дешифровки:", xor_decode(xorE, bytearray(input('  Введите ключ-слово: '), encoding='utf-8')).decode('utf-8', errors='ignore'))
 else:
-    print("[!] Файл пуст, нечего кодировать/декодировать")
+    print("[!] Файл пуст, нечего шифровать")
