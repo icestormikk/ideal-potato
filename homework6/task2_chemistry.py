@@ -1,8 +1,13 @@
 import os
 import re
 
-print("Формат ввода: X = Y (X - символ химического элемента, Y - кол-во атомов элемента X)\nРазделитель: запятая\nПример: C = 2, H = 6, O = 1\n")
-elements = re.split(",\W*", input('Введите кол-во атомов углерода, водорода и кислорода: ')); elements_coeffs = dict()
+#Формат ввода: X = Y (X - символ химического элемента, Y - кол-во атомов элемента X)
+#Разделитель: запятая
+#Пример: C = 2, H = 6, O = 1
+elements = []; elements_coeffs = dict()
+with open("input.txt", "rt") as f:
+    elements = re.split(",\W*", f.read());
+
 if (len(elements) == 3):
     for i in elements:
         if (re.fullmatch("[C,H,O]\s*=\s*[0-9]+", i)):
