@@ -1,7 +1,15 @@
 from random import randint
-colorDict = {"red":tuple([255,0,0]),"green":tuple([0,255,0]), "blue":tuple([0,0,255])}
+
+colorDict = {"red":tuple([255, 0, 0]),"green":tuple([0, 255, 0]), "blue":tuple([0, 0, 255])}
 
 def duplicateColor(colorName):
+    """Проверка на содержание цвета с именем colorName
+    в словаре цветов colorDict.
+    
+    Аргументы:
+    colorName - название нового цвета
+    """
+    
     return not colorDict.keys().isdisjoint([colorName])
 
 while True:
@@ -12,7 +20,8 @@ while True:
             print("\t[!] Цвет с таким именем уже есть в словаре")
         else:
             try:
-                colorDict[new_color] = tuple(int(x) for x in input('\tВведите код цвета в RGB (через пробел): ').split(" "))
+                rgb_values = [int(x) for x in input('\tВведите код цвета в RGB (через пробел): ').split(" ")]
+                colorDict[new_color] = tuple(rgb_values)
                 for i in colorDict[new_color]:
                     if (i > 255 or i < 0):
                         raise ValueError(f'[INFO] Введённое значение не входит в диапазон [0, 255]: {i} <-')
