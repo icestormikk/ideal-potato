@@ -39,6 +39,6 @@ if (len(encoding_text) > 0):
     print("  Результат шифрования:", xorE.decode('utf-8', errors='ignore'))
 
     print("\nXOR-дешифрование")
-    print("  Результат дешифровки:", xor_decode(xorE, bytearray(input('  Введите ключ-слово: '), encoding='utf-8')).decode('utf-8', errors='ignore'))
+    print("  Результат дешифрации:", xor_decode(xorE, bytearray(input('  Введите ключ-слово: '), encoding='utf-8')).decode('utf-8', errors='ignore'))
 else:
     print("[!] Файл пуст, нечего шифровать")
