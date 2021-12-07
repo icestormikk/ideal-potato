@@ -1,4 +1,9 @@
 def encodeStrings(lines):
+    """Перевод списка строк в список байт-кодов.
+   
+    Аргументы:
+    lines - список строк.
+    """
     result = []
     for i in lines:
         if (len(i) != 0):
@@ -6,6 +11,11 @@ def encodeStrings(lines):
     return result
 
 def decodeStrings(lines):
+    """Перевод списка байт-кодов в список из строк.
+   
+    Аргументы:
+    lines - список байт-кодов.
+    """
     result = []
     for i in lines:
         if (len(i) != 0):
