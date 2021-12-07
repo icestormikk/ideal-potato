@@ -7,7 +7,7 @@ def discriminant(coefs):
     coeffs - список/кортеж значений коэффициентов квадратного уравнения
     """
     
-    return float(coefs[1]) ** 2  - 4 * float(coefs[0]) * float(coefs[2])
+    return float(coefs[1])**2 - 4*float(coefs[0])*float(coefs[2])
 
 coeffs = [float(x) for x in input("Введите коэффициенты квадратного уравнения (через пробел): ").split(" ")]
 
