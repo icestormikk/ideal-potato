@@ -1,4 +1,6 @@
-fib_values = {0: 0, 1: 1}
+fib_values = {0: 0, 1: 1} 
+#словарь для хранения значения value, вычисленное по индексу key
+
 def fibonacci(n):
     if (n in fib_values):
         return fib_values[n]
