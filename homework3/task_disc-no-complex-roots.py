@@ -17,11 +17,11 @@ if (coeffs[0] == 0 or len(coeffs) != 3):
 
 print(f'Дискриминант равен {discriminant(coeffs)}')
 if (discriminant(coeffs) >= 0):
-    # x1,2 == (-b +- sqrt(discriminant())) / (2 * a)
-    x1 = (-coeffs[1] + math.sqrt(discriminant(coeffs))) / (2 * coeffs[0])
+    # x1,2 == (-b +- sqrt(discriminant())) / (2*a)
+    x1 = (-coeffs[1] + math.sqrt(discriminant(coeffs))) / (2*coeffs[0])
     print(f'Корни уравнения: x1 == {x1}', end='');
     if (discriminant(coeffs) > 0):
-        x2 = (-coeffs[1] - math.sqrt(discriminant(coeffs))) / (2 * coeffs[0])
+        x2 = (-coeffs[1] - math.sqrt(discriminant(coeffs))) / (2*coeffs[0])
         print(f', x2 == {x2}')
 else:
     print("Уравнение с такими коэффициентами не имеет действительных корней.");
