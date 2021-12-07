@@ -1,5 +1,17 @@
 min_pass_length = 6
+
 def checkPassword(password):
+    """Проверка строки-пароля на соответствие условиям,
+    установленным в задании 1 (занятие 5).
+    
+    Аргументы:
+    password - строка-пароль для проверки
+    
+    Исключения:
+    ValueError, если пароль не соответветствует хотя бы одному условию.
+    Ошибка содержит информацию о нарушенном условии.
+    """
+    
     if (len(password) < min_pass_length):
         raise ValueError("Слишком короткий пароль.");
     elif ({x for x in password}.intersection({str(i) for i in range(10)}).__len__() == 0):
@@ -13,6 +25,14 @@ def checkPassword(password):
         return True;
 
 def isPassword(password):
+    """Проверка строки-пароля на соответствие условиям,
+    установленным в задании 1 (занятие 5).
+    
+    Аргументы:
+    password - строка-пароль для проверки.
+    
+    Возвращает True, если пароль соответствует треблованиям, иначе False.
+    """
     if (len(password) < min_pass_length):
         return False;
     elif ({x for x in password}.intersection({str(i) for i in range(10)}).__len__() == 0):
@@ -35,4 +55,4 @@ try:
     checkPassword(input('\nВведите строку-пароль (exceptions version): '))
     print("Данная строка может быть паролем");
 except ValueError as ve:
-    print("[!] Строка не может использоваться в качестве пароля\nПричина:",ve.args[0])
+    print("[!] Строка не может использоваться в качестве пароля\nПричина:", ve.args[0])
