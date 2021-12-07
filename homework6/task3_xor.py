@@ -1,10 +1,25 @@
 def xor_encode(string, key):
+    """XOR-кодирование строки string по ключу key.
+    
+    Аргументы:
+    string - строка для шифрования;\n
+    key - строка-ключ, по которой будет вестись шифрование.
+    """
+    
     res = bytearray()
     for i in range(len(string)):
         res.append(string[i] ^ key[i % len(key)])
     return res
 
 def xor_decode(byteline, key):
+    """XOR-декодирование строки string по ключу key.
+    
+    Аргументы:
+    string - строка для дешифрации;\n
+    key - строка-ключ, по которой будет вестись дешифрование.
+    
+    """
+    
     res = bytearray()
     for i in range(len(byteline)):
         res.append(byteline[i] ^ key[i % (len(key))])
