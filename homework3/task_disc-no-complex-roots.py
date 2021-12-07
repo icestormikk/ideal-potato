@@ -1,9 +1,15 @@
 import math;
+
 def discriminant(coefs):
-    #coef[0] == a, coef[1] == b, coef[2] = c
+    """ Дискриминант квадратного уравнения.
+    
+    Аргументы: 
+    coeffs - список/кортеж значений коэффициентов квадратного уравнения
+    """
+    
     return float(coefs[1]) ** 2  - 4 * float(coefs[0]) * float(coefs[2])
 
-coeffs = [float(x) for x in input("Введите коэффициенты квадратного уравнения (через пробел): ").split(" ")];
+coeffs = [float(x) for x in input("Введите коэффициенты квадратного уравнения (через пробел): ").split(" ")]
 
 if (coeffs[0] == 0 or len(coeffs) != 3):
     print("Уравнение не является квадратным")
@@ -11,8 +17,11 @@ if (coeffs[0] == 0 or len(coeffs) != 3):
 
 print(f'Дискриминант равен {discriminant(coeffs)}')
 if (discriminant(coeffs) >= 0):
-    print(f'Корни уравнения: x1 == {(-coeffs[1] + math.sqrt(discriminant(coeffs)))/(2 * coeffs[0])}', end='');
+    # x1,2 == (-b +- sqrt(discriminant())) / (2 * a)
+    x1 = (-coeffs[1] + math.sqrt(discriminant(coeffs))) / (2 * coeffs[0])
+    print(f'Корни уравнения: x1 == {x1}', end='');
     if (discriminant(coeffs) > 0):
-        print(f', x2 == {(-coeffs[1] - math.sqrt(discriminant(coeffs)))/(2 * coeffs[0])}')
+        x2 = (-coeffs[1] - math.sqrt(discriminant(coeffs))) / (2 * coeffs[0])
+        print(f', x2 == {x2}')
 else:
     print("Уравнение с такими коэффициентами не имеет действительных корней.");
