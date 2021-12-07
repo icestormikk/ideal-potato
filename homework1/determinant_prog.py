@@ -40,7 +40,6 @@ def determinant(matr):
     gauss(matr); 
     for i in range(len(matr)):
         result *= matr[i][i];
-
     return round(result)
 
 size = int(input()); 
