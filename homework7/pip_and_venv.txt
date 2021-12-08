@@ -1,0 +1,113 @@
+C:\Users\Pavel>pip list
+Package    Version
+---------- -------
+numpy      1.21.4
+pip        21.3.1
+setuptools 57.4.0
+wheel      0.37.0
+
+C:\Users\Pavel>python -m venv Venvir
+
+C:\Users\Pavel>Venvir\Scripts\activate
+
+(Venvir) C:\Users\Pavel>pip install delorean
+Collecting delorean
+  Using cached Delorean-1.0.0.tar.gz (18 kB)
+Collecting babel>=2.1.1
+  Using cached Babel-2.9.1-py2.py3-none-any.whl (8.8 MB)
+Collecting humanize>=0.5.1
+  Using cached humanize-3.13.1-py3-none-any.whl (98 kB)
+Collecting python-dateutil>=2.4.2
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting pytz>=2015.7
+  Using cached pytz-2021.3-py2.py3-none-any.whl (503 kB)
+Collecting tzlocal>=1.2
+  Using cached tzlocal-4.1-py3-none-any.whl (19 kB)
+Collecting six>=1.5
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting tzdata
+  Using cached tzdata-2021.5-py2.py3-none-any.whl (339 kB)
+Collecting pytz-deprecation-shim
+  Using cached pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl (15 kB)
+Using legacy 'setup.py install' for delorean, since package 'wheel' is not installed.
+Installing collected packages: tzdata, six, pytz-deprecation-shim, pytz, tzlocal, python-dateutil, humanize, babel, delorean
+    Running setup.py install for delorean ... done
+Successfully installed babel-2.9.1 delorean-1.0.0 humanize-3.13.1 python-dateutil-2.8.2 pytz-2021.3 pytz-deprecation-shim-0.1.0.post0 six-1.16.0 tzdata-2021.5 tzlocal-4.1
+WARNING: You are using pip version 21.2.3; however, version 21.3.1 is available.
+You should consider upgrading via the 'C:\Users\Pavel\Venvir\Scripts\python.exe -m pip install --upgrade pip' command.
+
+(Venvir) C:\Users\Pavel>pip matplotlib
+ERROR: unknown command "matplotlib"
+
+(Venvir) C:\Users\Pavel>pip install matplotlib
+Collecting matplotlib
+  Downloading matplotlib-3.5.0-cp310-cp310-win_amd64.whl (7.2 MB)
+     |████████████████████████████████| 7.2 MB 177 kB/s
+Collecting pillow>=6.2.0
+  Downloading Pillow-8.4.0-cp310-cp310-win_amd64.whl (3.2 MB)
+     |████████████████████████████████| 3.2 MB 469 kB/s
+Requirement already satisfied: python-dateutil>=2.7 in c:\users\pavel\venvir\lib\site-packages (from matplotlib) (2.8.2)
+Collecting pyparsing>=2.2.1
+  Downloading pyparsing-3.0.6-py3-none-any.whl (97 kB)
+     |████████████████████████████████| 97 kB 1.7 MB/s
+Collecting fonttools>=4.22.0
+  Downloading fonttools-4.28.3-py3-none-any.whl (884 kB)
+     |████████████████████████████████| 884 kB 1.7 MB/s
+Collecting numpy>=1.17
+  Using cached numpy-1.21.4-cp310-cp310-win_amd64.whl (14.0 MB)
+Collecting packaging>=20.0
+  Downloading packaging-21.3-py3-none-any.whl (40 kB)
+     |████████████████████████████████| 40 kB 1.3 MB/s
+Collecting setuptools-scm>=4
+  Downloading setuptools_scm-6.3.2-py3-none-any.whl (33 kB)
+Collecting kiwisolver>=1.0.1
+  Downloading kiwisolver-1.3.2-cp310-cp310-win_amd64.whl (52 kB)
+     |████████████████████████████████| 52 kB 299 kB/s
+Collecting cycler>=0.10
+  Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Requirement already satisfied: six>=1.5 in c:\users\pavel\venvir\lib\site-packages (from python-dateutil>=2.7->matplotlib) (1.16.0)
+Requirement already satisfied: setuptools in c:\users\pavel\venvir\lib\site-packages (from setuptools-scm>=4->matplotlib) (57.4.0)
+Collecting tomli>=1.0.0
+  Downloading tomli-1.2.2-py3-none-any.whl (12 kB)
+Installing collected packages: pyparsing, tomli, packaging, setuptools-scm, pillow, numpy, kiwisolver, fonttools, cycler, matplotlib
+Successfully installed cycler-0.11.0 fonttools-4.28.3 kiwisolver-1.3.2 matplotlib-3.5.0 numpy-1.21.4 packaging-21.3 pillow-8.4.0 pyparsing-3.0.6 setuptools-scm-6.3.2 tomli-1.2.2
+WARNING: You are using pip version 21.2.3; however, version 21.3.1 is available.
+You should consider upgrading via the 'C:\Users\Pavel\Venvir\Scripts\python.exe -m pip install --upgrade pip' command.
+
+(Venvir) C:\Users\Pavel>pip list
+Package               Version
+--------------------- -----------
+Babel                 2.9.1
+cycler                0.11.0
+Delorean              1.0.0
+fonttools             4.28.3
+humanize              3.13.1
+kiwisolver            1.3.2
+matplotlib            3.5.0
+numpy                 1.21.4
+packaging             21.3
+Pillow                8.4.0
+pip                   21.2.3
+pyparsing             3.0.6
+python-dateutil       2.8.2
+pytz                  2021.3
+pytz-deprecation-shim 0.1.0.post0
+setuptools            57.4.0
+setuptools-scm        6.3.2
+six                   1.16.0
+tomli                 1.2.2
+tzdata                2021.5
+tzlocal               4.1
+WARNING: You are using pip version 21.2.3; however, version 21.3.1 is available.
+You should consider upgrading via the 'C:\Users\Pavel\Venvir\Scripts\python.exe -m pip install --upgrade pip' command.
+
+(Venvir) C:\Users\Pavel>Venvir\Scripts\deactivate.bat
+C:\Users\Pavel>pip list
+Package    Version
+---------- -------
+numpy      1.21.4
+pip        21.3.1
+setuptools 57.4.0
+wheel      0.37.0
+
+C:\Users\Pavel>
