@@ -3,7 +3,7 @@ import math
 
 import numpy
 
-from determinant_prog import determinant
+from task2_determinant_prog import determinant
 
 class TestDeterm:
     def test_wrong_size(self):
